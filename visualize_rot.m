@@ -23,7 +23,7 @@ function visualize_rot(vertices, faces, center, move_angle, move_speed, wheel_sp
         if t == levels+1
             plot(angle_plot, time(1:end), move_angle(1:end,1), 'r' ,time(1:end), move_angle(1:end,2), 'g', time(1:end), move_angle(1:end,3),'b') 
             plot(speed_plot, time(1:end), move_speed(1:end,1), 'r' ,time(1:end), move_speed(1:end,2), 'g', time(1:end), move_speed(1:end,3),'b') 
-            plot(wheel_plot, time(1:end), wheel_speed(1:end,1), 'r' ,time(1:end,1), wheel_speed(1:end,2), 'g', time(1:end,1), wheel_speed(1:end,3), 'b', time(1:end,1), wheel_speed(1:end,4), 'y')                
+            plot(wheel_plot, time(1:end), wheel_speed(1:end,1), 'r' ,time(1:end,1), wheel_speed(1:end,2), 'g', time(1:end,1), wheel_speed(1:end,3), 'b', time(1:end,1), wheel_speed(1:end,4), 'm')                
         else
             plot(angle_plot, time(1:window*t), move_angle(1:window*t,1), 'r' ,time(1:window*t), move_angle(1:window*t,2), 'g', time(1:window*t), move_angle(1:window*t,3),'b') 
             plot(speed_plot, time(1:window*t), move_speed(1:window*t,1), 'r' ,time(1:window*t), move_speed(1:window*t,2), 'g', time(1:window*t), move_speed(1:window*t,3),'b') 
