@@ -5,8 +5,8 @@ format short g;
 visual_tag = ["init_phi", "init_theta", "init_psi", "base_center_x", "base_center_y", "base_center_z", "base_radius", "base_height", "stand_height", "actuator_angle", "actuator_tilt"];
 visual_tag_default = [0 0 0 0 0 0 5 0.5 2.5 45 35.264];
 
-control_tag = ["Ip","I_motor", "I_wheel", "Kv", "Kt", "des_phi", "des_theta", "des_psi", "T_ext_x", "T_ext_y", "T_ext_z", "omega_i_x", "omega_i_y", "omega_i_z", "Tmax", "Ts"];
-control_tag_default = [2.5 0.00725 25 0.07 0.07 80 40 60 0 0 0 0 0 0 500 10];
+control_tag = ["Ip","I_motor", "I_wheel", "Kv", "Kt", "des_phi", "des_theta", "des_psi", "omega_i_x", "omega_i_y", "omega_i_z", "Tmax", "Ts"];
+control_tag_default = [2.5 0.00725 25 0.07 0.07 80 40 60 0 0 0 500 10];
 
 import_tag = ["desired_angle_x_im", "desired_angle_y_im", "desired_angle_z_im", "Ts_im", "Tmax_im"];
 import_tag_default = [0 0 0 1 50];
@@ -77,22 +77,17 @@ uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Pos
 uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.85 0.1250 0.1], 'String', control_tag_default(6), 'Tag', control_tag(6));
 uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.650 0.85 0.1250 0.1], 'String', control_tag_default(7), 'Tag', control_tag(7));
 uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.800 0.85 0.1250 0.1], 'String', control_tag_default(8), 'Tag', control_tag(8));
- 
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.725 0.5 0.1],'String','External Torque (x,y,z)', 'HorizontalAlignment', 'left');
+
+uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.725 0.5 0.1],'String','Initial Velocity (roll, pitch, yaw)', 'HorizontalAlignment', 'left');
 uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.725 0.1250 0.1], 'String', control_tag_default(9), 'Tag', control_tag(9));
 uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.650 0.725 0.1250 0.1], 'String', control_tag_default(10), 'Tag', control_tag(10));
 uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.800 0.725 0.1250 0.1], 'String', control_tag_default(11), 'Tag', control_tag(11));
 
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.60 0.5 0.1],'String','Initial Velocity (roll, pitch, yaw)', 'HorizontalAlignment', 'left');
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.60 0.1250 0.1], 'String', control_tag_default(12), 'Tag', control_tag(12));
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.650 0.60 0.1250 0.1], 'String', control_tag_default(13), 'Tag', control_tag(13));
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.800 0.60 0.1250 0.1], 'String', control_tag_default(14), 'Tag', control_tag(14));
+uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.60 0.5 0.1],'String','Sampling Time (s)', 'HorizontalAlignment', 'left');
+uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.60 0.25 0.1], 'String', control_tag_default(12), 'Tag', control_tag(12));
 
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.475 0.5 0.1],'String','Sampling Time (s)', 'HorizontalAlignment', 'left');
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.475 0.25 0.1], 'String', control_tag_default(15), 'Tag', control_tag(15));
-
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.35 0.5 0.1],'String','Frame Speed', 'HorizontalAlignment', 'left');
-uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.35 0.25 0.1], 'String', control_tag_default(16), 'Tag', control_tag(16));
+uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'text', 'Position', [0 0.475 0.5 0.1],'String','Frame Speed', 'HorizontalAlignment', 'left');
+uicontrol('Parent', panel_des_time, 'Units', 'normalized', 'Style', 'edit', 'Position', [0.500 0.475 0.25 0.1], 'String', control_tag_default(13), 'Tag', control_tag(13));
 
 panel_controller = uitabgroup('Position', [0.01 0.015 0.25 0.25], 'Tag', 'panel_controller');
 
