@@ -286,7 +286,7 @@ function simulate_controller(src,~, coeff_tag, control_tag, visual_tag, var_list
     cla(wheel_plot);
     cla(visual_plot);
    % 3d rotation
-     visualize_rot(vertices, faces, platform_c(4:6), platform_angle, platform_speed, wheel_speed, time, visual_plot, angle_plot, speed_plot, wheel_plot, control_c(16));
+     visualize_rot(vertices, faces, platform_c(4:6), platform_angle, platform_speed, wheel_speed, time, visual_plot, angle_plot, speed_plot, wheel_plot, control_c(13));
      legend(angle_plot, {'roll','pitch','yaw'},'Location','northwest')
      legend(speed_plot, {'roll','pitch','yaw'},'Location','northeast')
      legend(wheel_plot, {'Wheel 1','Wheel 2','Wheel 3', 'Wheel 4'},'Location','northeast')
